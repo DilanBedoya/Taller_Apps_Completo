@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="calculator">
+    <ion-input [(ngModel)]="display" readonly></ion-input>
+    <div class="buttons">
+      <ion-button *ngFor="let button of buttons" (click)="onButtonClick(button)">
+        {{ button }}
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
